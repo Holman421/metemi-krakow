@@ -23,7 +23,7 @@ export default function HeroContent() {
               variant="primary"
               className="2xl:absolute bottom-[20%] right-32"
             />
-            <div className="hidden absolute -bottom-[375px] right-0 md:flex flex-col items-end w-fit self-end gap-20 translate-x-125 z-[3]">
+            <div className="hidden absolute -bottom-[200px] 2xl:-bottom-[375px] right-0 md:flex flex-col items-end w-fit self-end gap-20 translate-x-125 z-[3]">
               <DMText
                 rounded="right"
                 colorVariant="primary"

@@ -4,10 +4,10 @@ import Video from "../shared/ui/Video";
 
 export default function HeroVideo() {
   return (
-    <div className="flex-1 relative anim-fade-right translate-y-58 md:translate-y-0">
+    <div className="flex-1 relative anim-fade-right translate-y-58 md:translate-y-0 max-h-[800px]">
       <Video
         src="/videos/hero.mp4"
-        className="w-full h-auto rounded-tl-custom-big rounded-bl-custom-big aspect-[91/102] object-cover translate-x-40"
+        className="w-full h-auto rounded-tl-custom-big rounded-bl-custom-big aspect-[91/102] object-cover translate-x-40 max-h-[800px]"
         aria-label="Video Thumbnail"
       />
       <h2 className="absolute left-[20%] bottom-[30%] md:bottom-[40%] text-35xl font-bold text-white leading-[110%]">

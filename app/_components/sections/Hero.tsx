@@ -7,7 +7,7 @@ import BubbleBackground from "../shared/ui/BubbleBackground";
 export default function Hero() {
   return (
     <section className="w-full px-xs pb-24">
-      <div className="bg-[url('/images/bg-final-mobile.jpg')] md:bg-[url('/images/bg-final.jpg')] relative bg-cover bg-center w-full flex flex-col rounded-bl-custom-xl rounded-br-custom-xl overflow-hidden">
+      <div className="bg-[url('/images/bg-final-mobile.jpg')] md:bg-[url('/images/bg-final.jpg')] relative bg-cover bg-center w-full flex flex-col rounded-bl-custom-xl rounded-br-custom-xl">
         <BubbleBackground />
         <div className="relative z-10 flex flex-col w-full">
           <HeroHeader />

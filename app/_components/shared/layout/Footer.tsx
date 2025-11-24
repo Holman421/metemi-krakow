@@ -8,6 +8,7 @@ import {
   SnapchatIcon,
   TwitterIcon,
 } from "../icons";
+import ShimmerWrapper from "../ui/ShimmerWrapper";
 
 export default function Footer() {
   return (
@@ -59,16 +60,18 @@ export default function Footer() {
       <p className="text-gray text-base mt-40">
         © Copyrights METEMI | All Rights Reserved
       </p>
-      <div className="size-75 rounded-xl relative overflow-hidden mt-[clamp(2.813rem,calc(2.648rem+0.658vw),3.438rem)] mb-[clamp(3.438rem,calc(2.78rem+2.632vw),5.938rem)] flex items-center justify-center">
-        <Image
-          src="/images/rectangle-bg.jpg"
-          alt="Logo"
-          width={75}
-          height={75}
-          className="size-full absolute"
-        />
-        <LetterMIcon className="size-35 relative z-[2]" />
-      </div>
+      <ShimmerWrapper className="relative z-[2]">
+        <div className="size-75 rounded-xl relative overflow-hidden mt-[clamp(2.813rem,calc(2.648rem+0.658vw),3.438rem)] mb-[clamp(3.438rem,calc(2.78rem+2.632vw),5.938rem)] flex items-center justify-center">
+          <Image
+            src="/images/rectangle-bg.jpg"
+            alt="Logo"
+            width={75}
+            height={75}
+            className="size-full absolute"
+          />
+          <LetterMIcon className="size-35 relative z-[2]" />
+        </div>
+      </ShimmerWrapper>
       <div className="bg-[url('/images/bg-final.jpg')] h-33 bg-cover bg-center flex flex-col rounded-tl-[120px] rounded-tr-[120px] w-full"></div>
     </footer>
   );

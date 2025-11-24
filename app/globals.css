@@ -147,6 +147,12 @@
     font-weight: 700;
   }
 
+  .text-stroke-krakow {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    font-weight: 700;
+  }
+
   .text-outline {
     -webkit-text-stroke: 1px white;
     color: transparent;
@@ -198,21 +204,39 @@ body {
 }
 
 @keyframes moveInCircle {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(180deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes moveVertical {
-  0% { transform: translateY(-50%); }
-  50% { transform: translateY(50%); }
-  100% { transform: translateY(-50%); }
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
 @keyframes moveHorizontal {
-  0% { transform: translateX(-50%) translateY(-10%); }
-  50% { transform: translateX(50%) translateY(10%); }
-  100% { transform: translateX(-50%) translateY(-10%); }
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
 }
 
 .gradient-bg {
@@ -249,7 +273,12 @@ body {
 
 .g1 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color1), 0.8) 0,
+      rgba(var(--color1), 0) 50%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -262,7 +291,12 @@ body {
 
 .g2 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color2), 0.8) 0,
+      rgba(var(--color2), 0) 50%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -275,7 +309,12 @@ body {
 
 .g3 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color3), 0.8) 0,
+      rgba(var(--color3), 0) 50%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -288,7 +327,12 @@ body {
 
 .g4 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color4), 0.8) 0,
+      rgba(var(--color4), 0) 50%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: var(--circle-size);
   height: var(--circle-size);
@@ -301,7 +345,12 @@ body {
 
 .g5 {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color5), 0.8) 0,
+      rgba(var(--color5), 0) 50%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: calc(var(--circle-size) * 2);
   height: calc(var(--circle-size) * 2);
@@ -314,7 +363,12 @@ body {
 
 .interactive {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+  background: radial-gradient(
+      circle at center,
+      rgba(var(--color-interactive), 0.8) 0,
+      rgba(var(--color-interactive), 0) 50%
+    )
+    no-repeat;
   mix-blend-mode: var(--blending);
   width: 100vmin;
   height: 100vmin;
@@ -323,6 +377,166 @@ body {
   opacity: 0.7;
 }
 
-.g1, .g2, .g3, .g4, .g5, .interactive {
+.g1,
+.g2,
+.g3,
+.g4,
+.g5,
+.interactive {
   will-change: transform;
+}
+
+/* ========================================
+   FIXED BOTTOM BANNER
+   ======================================== */
+.fixed-bottom-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 48, 79, 0.98) 0%,
+    rgba(226, 55, 62, 0.98) 50%,
+    rgba(244, 134, 30, 0.98) 100%
+  );
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.banner-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.banner-close:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.banner-close:active {
+  transform: scale(0.95);
+}
+
+.fixed-bottom-banner.show {
+  transform: translateY(0);
+}
+
+.banner-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.banner-text h4 {
+  margin: 0 0 0.25rem 0;
+  color: white;
+  background: linear-gradient(90deg, #ffffff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(1.25rem, calc(1.034rem + 0.526vw), 2rem);
+}
+
+.banner-text p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+
+.banner-cta {
+  /* Inherits from .google-play-btn base class */
+  flex-shrink: 0;
+}
+
+.banner-cta:active {
+  transform: scale(0.98);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fixed-bottom-banner {
+    padding: 1rem 1.5rem;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .banner-text h4 {
+    font-size: clamp(1rem, calc(0.868rem + 0.526vw), 1.5rem);
+  }
+
+  .banner-cta {
+    height: 3rem;
+  }
+}
+
+/* ========================================
+   SHIMMER EFFECT
+   ======================================== */
+@keyframes shimmer-sweep {
+  0% {
+    transform: skewX(-20deg) translateX(-150%);
+  }
+  100% {
+    transform: skewX(-20deg) translateX(200%);
+  }
+}
+
+.shimmer-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg) translateX(-150%);
+  transition: transform 0.5s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.shimmer-container:hover::before {
+  transform: skewX(-20deg) translateX(200%);
+  transition: transform 0.75s ease-in-out;
+}
+
+.shimmer-container.shimmer-active::before {
+  animation: shimmer-sweep 1.5s ease-in-out forwards;
 }

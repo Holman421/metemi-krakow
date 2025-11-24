@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import { LetterMIcon } from "../shared/icons";
+import ShimmerWrapper from "../shared/ui/ShimmerWrapper";
 
 const MAX_VALUES = {
   days: 30,
@@ -117,16 +118,18 @@ export default function Countdown() {
         </span>
       </div>
       <div className="absolute left-[10%] bottom-[-30%] md:bottom-[-15%] flex gap-16">
-        <div className="anim-pop-in size-[clamp(3.75rem,calc(2.27rem+5.921vw),9.375rem)] rounded-custom-big relative overflow-hidden flex items-center justify-center">
-          <Image
-            src="/images/rectangle-bg.jpg"
-            alt="Logo"
-            width={150}
-            height={150}
-            className="size-full absolute"
-          />
-          <LetterMIcon className="size-[clamp(1.75rem,calc(0.977rem+3.092vw),4.688rem)] relative z-[2]" />
-        </div>
+        <ShimmerWrapper className=" anim-pop-in relative z-[2]">
+          <div className=" size-[clamp(3.75rem,calc(2.27rem+5.921vw),9.375rem)] rounded-custom-big relative overflow-hidden flex items-center justify-center">
+            <Image
+              src="/images/rectangle-bg.jpg"
+              alt="Logo"
+              width={150}
+              height={150}
+              className="size-full absolute"
+            />
+            <LetterMIcon className="size-[clamp(1.75rem,calc(0.977rem+3.092vw),4.688rem)] relative z-[2]" />
+          </div>
+        </ShimmerWrapper>
         <p className="text-3xl anim-text-lines-gradient font-bold leading-[95%]">
           We are <br /> Coming Soon.
         </p>

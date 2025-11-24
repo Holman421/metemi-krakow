@@ -5,7 +5,7 @@ import Video from "../shared/ui/Video";
 export default function Krakow() {
   return (
     <div className="w-full flex flex-col">
-      <div className="flex flex-col items-end md:flex-row w-full">
+      <div className="flex flex-col items-start md:flex-row w-full">
         <KrakowText className="w-full ld:w-[60%] px-[5%] lg:px-64 mx-auto mb-32 lg:mb-0" />
         <div className="w-full md:w-[40%] md:pr-24 flex flex-col gap-16 justify-between pb-32 md:pb-24 px-24 md:px-0">
           <h4 className="text-2xl text-gray font-bold anim-text-lines text-center md:text-start">
