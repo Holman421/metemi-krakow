@@ -14,19 +14,20 @@ export default function HeroVideo() {
         Don&apos;t <br /> tweet. Meet.
       </h2>
 
-      <div className="flex absolute -bottom-90 right-32 md:hidden flex-col items-end w-fit self-end gap-4 z-[3]">
+      <div className="flex absolute -bottom-50 -left-16 flex-col items-end w-fit self-end gap-4 md:gap-16 z-[3]">
         <DMText
           rounded="right"
           colorVariant="primary"
           text="Tak jo, potkáme se v 7 před tou vietnamskou restaurací? Vezmeme to s sebou."
           time="12:02"
+          className="mr-[clamp(5rem,calc(3.191rem+7.237vw),11.875rem)]"
         />
         <DMText
           rounded="left"
           colorVariant="secondary"
           text="OK, souhlasím, uvidíme se"
           time="12:05"
-          className="mr-[clamp(5rem,calc(3.191rem+7.237vw),11.875rem)]"
+          className=""
         />
       </div>
     </div>
